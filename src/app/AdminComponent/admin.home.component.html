@@ -1,0 +1,62 @@
+<div align="center" class="container">
+  <br />
+  <button class="btn btn-success" (click)="pendingUserList()">
+    Approve Pending Users
+  </button>&nbsp;&nbsp;&nbsp;
+  <button class="btn btn-primary" (click)="pendingPersonList()">
+    Approve Pending Person
+  </button>
+  &nbsp;&nbsp;&nbsp;
+  <button class="btn btn-primary" (click)="searchPerson()">Search</button>
+  &nbsp;&nbsp;&nbsp;
+  <button class="btn btn-danger" (click)="logout()">
+    Logout
+  </button>
+  <br />
+  <br />
+  <table class="table table-bordered table-striped" cellpadding="4">
+    <thead>
+      <tr>
+        <th>PId</th>
+        <th colSpan="3">Full Name</th>
+        <th>Gender</th>
+        <th>DOB</th>
+        <th>Age</th>
+        <th colSpan="3">Address</th>
+        <th>City</th>
+        <th>State</th>
+        <th>PIN Code</th>
+        <th>Phone No</th>
+        <th>Mobile No</th>
+        <th>Physical Disability</th>
+        <th>Marital Status</th>
+        <th>Education Status</th>
+        <th>Birth Sign</th>
+      </tr>
+      <tr *ngFor="let value of person">
+        <td>{{value.PersonalUniqueId}}</td>
+        <td>{{value.FirstName}}</td>
+        <td>{{value.MiddleName}}</td>
+        <td>{{value.LastName}}</td>
+        <td>{{value.Gender}}</td>
+        <td>{{value.DateOfBirth}}</td>
+        <td>{{value.Age}}</td>
+        <td>{{value.Flat}}</td>
+        <td>{{value.SocietyName}}</td>
+        <td>{{value.StreetName}}</td>
+        <td>{{value.City}}</td>
+        <td>{{value.State}}</td>
+        <td>{{value.PinCode}}</td>
+        <td>{{value.MobileNo}}</td>
+        <td>{{value.PhoneNo}}</td>
+        <td>{{value.PhysicalDisability}}</td>
+        <td>{{value.MaritalStatus}}</td>
+        <td>{{value.EducationStatus}}</td>
+        <td>{{value.BirthSign}}</td>
+      </tr>
+    </thead>
+
+  </table>
+
+  </div>
+<router-outlet></router-outlet>

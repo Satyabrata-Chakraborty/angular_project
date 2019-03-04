@@ -1,0 +1,55 @@
+<div align="center">
+  <label for="searchbox">Search Person</label
+  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input
+    type="text"
+    id="PersonalUniqueId"
+    placeholder="Enter ID"
+    [(ngModel)]="this.per.PersonalUniqueId"
+    (keyup)="search()"
+  />
+  &nbsp;&nbsp;&nbsp;
+  <button class="btn btn-success" (click)="adminHome()">Back</button>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>PId</th>
+        <th colspan="3">Full Name</th>
+        <th>Gender</th>
+        <th>DOB</th>
+        <th>Age</th>
+        <th colSpan="3">Address</th>
+        <th>City</th>
+        <th>State</th>
+        <th>PIN Code</th>
+        <th>Phone No</th>
+        <th>Mobile No</th>
+        <th>Physical Disability</th>
+        <th>Marital Status</th>
+        <th>Education Status</th>
+        <th>Birth Sign</th>
+      </tr>
+    </thead>
+    <tr *ngIf="searchedvalue">
+      <td>{{ searchedvalue.PersonalUniqueId }}</td>
+      <td>{{ searchedvalue.FirstName }}</td>
+      <td>{{ searchedvalue.MiddleName }}</td>
+      <td>{{ searchedvalue.LastName }}</td>
+      <td>{{ searchedvalue.Gender }}</td>
+      <td>{{ searchedvalue.DateOfBirth }}</td>
+      <td>{{ searchedvalue.Age }}</td>
+      <td>{{ searchedvalue.Flat }}</td>
+      <td>{{ searchedvalue.SocietyName }}</td>
+      <td>{{ searchedvalue.StreetName }}</td>
+      <td>{{ searchedvalue.City }}</td>
+      <td>{{ searchedvalue.State }}</td>
+      <td>{{ searchedvalue.PinCode }}</td>
+      <td>{{ searchedvalue.MobileNo }}</td>
+      <td>{{ searchedvalue.PhoneNo }}</td>
+      <td>{{ searchedvalue.PhysicalDisability }}</td>
+      <td>{{ searchedvalue.MaritalStatus }}</td>
+      <td>{{ searchedvalue.EducationStatus }}</td>
+      <td>{{ searchedvalue.BirthSign }}</td>
+    </tr>
+  </table>
+</div>

@@ -1,5 +1,5 @@
 {
-  "name": "myapp-angular-project",
+  "name": "myapp-ng-project",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -28,10 +28,11 @@
     "@angular-devkit/build-angular": "~0.13.0",
     "@angular/cli": "~7.3.0",
     "@angular/compiler-cli": "~7.2.0",
+    "@angular/http": "^7.2.6",
     "@angular/language-service": "~7.2.0",
-    "@types/node": "~8.9.4",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
+    "@types/node": "~8.9.4",
     "codelyzer": "~4.5.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
@@ -43,6 +44,12 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
-    "typescript": "~3.2.2"
+    "typescript": "~3.2.2",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "history": "^4.7.2",
+    "jsonwebtoken": "^8.4.0",
+    "mongoose": "^5.4.11",
+    "path": "^0.12.7"
   }
 }

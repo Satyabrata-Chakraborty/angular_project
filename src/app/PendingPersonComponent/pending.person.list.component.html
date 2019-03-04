@@ -1,0 +1,59 @@
+<div align="center">
+  <button class="btn btn-success" (click)="adminhome()">
+    Back
+  </button>
+</div>
+<br /><br /><br />
+<table class="table table-bordered table-striped" cellpadding="4">
+  <thead>
+    <tr>
+      <th>PId</th>
+      <th colSpan="3">Full Name</th>
+      <th>Gender</th>
+      <th>DOB</th>
+      <th>Age</th>
+      <th colSpan="3">Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>PIN Code</th>
+      <th>Phone No</th>
+      <th>Mobile No</th>
+      <th>Physical Disability</th>
+      <th>Marital Status</th>
+      <th>Education Status</th>
+      <th>Birth Sign</th>
+      <th colspan="2">Action</th>
+    </tr>
+    <tr *ngFor="let value of pendingperson">
+      <td>{{ value.PersonalUniqueId }}</td>
+      <td>{{ value.FirstName }}</td>
+      <td>{{ value.MiddleName }}</td>
+      <td>{{ value.LastName }}</td>
+      <td>{{ value.Gender }}</td>
+      <td>{{ value.DateOfBirth }}</td>
+      <td>{{ value.Age }}</td>
+      <td>{{ value.Flat }}</td>
+      <td>{{ value.SocietyName }}</td>
+      <td>{{ value.StreetName }}</td>
+      <td>{{ value.City }}</td>
+      <td>{{ value.State }}</td>
+      <td>{{ value.PinCode }}</td>
+      <td>{{ value.MobileNo }}</td>
+      <td>{{ value.PhoneNo }}</td>
+      <td>{{ value.PhysicalDisability }}</td>
+      <td>{{ value.MaritalStatus }}</td>
+      <td>{{ value.EducationStatus }}</td>
+      <td>{{ value.BirthSign }}</td>
+      <td>
+        <button class="btn btn-primary" (click)="approve(value)">
+          Approve
+        </button>
+      </td>
+      <td>
+        <button class="btn btn-danger" (click)="reject(value)">
+          Reject
+        </button>
+      </td>
+    </tr>
+  </thead>
+</table>

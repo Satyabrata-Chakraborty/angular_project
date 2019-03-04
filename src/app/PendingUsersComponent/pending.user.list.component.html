@@ -1,0 +1,39 @@
+<div align="center">
+  <br />
+  <button class="btn btn-success" (click)="adminhome()">
+    Back
+  </button>
+  <br />
+  <br />
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>User Id</th>
+        <th>Username</th>
+        <th>Email address</th>
+        <th>Role Id</th>
+        <th colSpan="2" align="center">
+          Action
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let value of user">
+        <td>{{ value.UserId }}</td>
+        <td>{{ value.UserName }}</td>
+        <td>{{ value.EmailAddress }}</td>
+        <td>{{ value.RoleId }}</td>
+        <td>
+          <button class="btn btn-primary" (click)="approve(value)">
+            Approve
+          </button>
+        </td>
+        <td>
+          <button class="btn btn-danger" (click)="reject(value)">
+            Reject
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

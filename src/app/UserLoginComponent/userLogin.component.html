@@ -1,0 +1,30 @@
+<div align="center">
+  <h1>User Login</h1>
+  <table>
+    <tbody>
+      <tr>
+        <td>
+          <h3>Username</h3>
+        </td>
+        <td>
+          <input id="Username" type="text" name="UserName" [(ngModel)]="this.usr.UserName"/>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h3>Password</h3>
+        </td>
+        <td>
+          <input id="Password" type="password" name="Password" [(ngModel)]="this.usr.Password" required />
+        </td>
+      </tr>
+      <tr align="center">
+        <td colSpan="2">
+          <button class="btn btn-primary" (click)='userAuth()'>
+            Login
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

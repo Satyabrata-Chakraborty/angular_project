@@ -1,0 +1,100 @@
+<form ngNativeValidate (ngSubmit)="save()">
+  <div align="center">
+    <table>
+      <tbody>
+        <tr>
+          <td colspan="2">
+            <h1>User Registration</h1>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>UserId</label>
+          </td>
+          <td>
+            <input
+              type="text"
+              name="UserId"
+              [(ngModel)]="this.User.UserId"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>User Name</label>
+          </td>
+          <td>
+            <input
+              type="text"
+              name="UserName"
+              [(ngModel)]="this.User.UserName"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Email Address</label>
+          </td>
+          <td>
+            <input
+              type="email"
+              name="EmailAddress"
+              [(ngModel)]="this.User.EmailAddress"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Password</label>
+          </td>
+          <td>
+            <input
+              type="password"
+              name="Password"
+              [(ngModel)]="this.User.Password"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Retype Password</label>
+          </td>
+          <td>
+            <input
+              type="password"
+              name="retypepassword"
+              [(ngModel)]="this.retypepwd"
+              required
+            />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Roles</label>
+          </td>
+          <td align="center">
+            <select name="RoleId" [(ngModel)]="this.User.RoleId" required>
+              <option value="111">Administrator</option>
+              <option value="222">Operator</option>
+              <option value="333">User</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="submit" class="btn btn-success" value="Register" />
+          </td>
+          <td>
+            <button class="btn btn-danger" (click)="logout()">
+              Logout
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</form>
